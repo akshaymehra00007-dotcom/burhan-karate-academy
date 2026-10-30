@@ -51,3 +51,9 @@ Google Fonts supplies Manrope and Barlow Condensed, with local fallback fonts. G
 
 The static publish directory is `dist`. `.openai/hosting.json` contains the private Sites preview identity; no credentials are included. The GitHub repository can independently deploy `dist` to GitHub Pages, Vercel, Netlify, or Cloudflare Pages.
 
+
+## Deployment reliability and mobile verification
+
+Vercel is explicitly configured as Other (framework null), publishing dist as static files. The local preview lives in scripts/preview.mjs and is not a production server. Run node scripts/check-site.mjs to validate the deploy configuration, required page assets and JavaScript. A READY deployment must also pass HTTP checks on the real public domain.
+
+Mobile fixes include staggered hero motion, dialog transitions, scroll locking/restoration, scrollable landscape menus, keyboard-aware contact controls, 44px minimum dialog/video controls, 16px form fields to avoid iOS zoom, narrow-screen wrapping, and background-video suspension outside the hero. Reduced-motion and data-saver preferences remain respected.

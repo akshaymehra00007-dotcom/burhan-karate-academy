@@ -4,9 +4,8 @@
   "private": true,
   "description": "Bhuran Karate Academy, Agra — responsive business website",
   "scripts": {
-    "dev": "node server.mjs",
-    "start": "node server.mjs",
-    "check": "node --check dist/app.js && node --check dist/site-config.js",
+    "dev": "node scripts/preview.mjs",
+    "check": "node scripts/check-site.mjs",
     "build": "npm run check"
   }
 }
