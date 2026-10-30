@@ -27,24 +27,6 @@
     const observer = new IntersectionObserver(entries => entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:0, rootMargin:'0px 0px -24px 0px'});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   }
-  // Stagger the values into view as the principles strip is reached.
-  const principles = $('.principles');
-  if (principles && 'IntersectionObserver' in window && !reduced.matches) {
-    principles.classList.add('values-animate');
-    const valuesObserver = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        principles.classList.add('values-visible');
-        valuesObserver.disconnect();
-      }
-    }, { threshold: .25 });
-    valuesObserver.observe(principles);
-    reduced.addEventListener('change', e => {
-      if (e.matches) {
-        principles.classList.add('values-visible');
-        valuesObserver.disconnect();
-      }
-    });
-  }
   // The contact bar still works when reduced motion disables reveal animations.
   if ('IntersectionObserver' in window) {
     const dockObserver = new IntersectionObserver(([e])=>$('.mobile-dock').classList.toggle('shown',!e.isIntersecting),{threshold:.12}); dockObserver.observe($('.hero'));
