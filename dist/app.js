@@ -27,6 +27,24 @@
     const observer = new IntersectionObserver(entries => entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:0, rootMargin:'0px 0px -24px 0px'});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   }
+  // Stagger the values into view as the principles strip is reached.
+  const principles = $('.principles');
+  if (principles && 'IntersectionObserver' in window && !reduced.matches) {
+    principles.classList.add('values-animate');
+    const valuesObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        principles.classList.add('values-visible');
+        valuesObserver.disconnect();
+      }
+    }, { threshold: .25 });
+    valuesObserver.observe(principles);
+    reduced.addEventListener('change', e => {
+      if (e.matches) {
+        principles.classList.add('values-visible');
+        valuesObserver.disconnect();
+      }
+    });
+  }
   // The contact bar still works when reduced motion disables reveal animations.
   if ('IntersectionObserver' in window) {
     const dockObserver = new IntersectionObserver(([e])=>$('.mobile-dock').classList.toggle('shown',!e.isIntersecting),{threshold:.12}); dockObserver.observe($('.hero'));
@@ -50,7 +68,7 @@
   $('#lightbox').addEventListener('keydown',e=>{if(e.key==='ArrowRight')showPhoto(photoIndex+1);if(e.key==='ArrowLeft')showPhoto(photoIndex-1);});
   document.querySelectorAll('[data-interest]').forEach(a=>a.addEventListener('click',()=>{$('#interest').value=a.dataset.interest;}));
   let enquiry = '';
-  $('#enquiry-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;const data=new FormData(f);const name=String(data.get('name')).trim();const phone=String(data.get('phone')).trim();if(!name){f.elements.name.setCustomValidity('Please enter your name.');f.elements.name.reportValidity();return;}f.elements.name.setCustomValidity('');if(phone.replace(/\D/g,'').length<10){f.elements.phone.setCustomValidity('Please enter a valid mobile number with at least 10 digits.');f.elements.phone.reportValidity();return;}f.elements.phone.setCustomValidity('');enquiry=`Hello Bhuran Karate Academy!\nI’d like to enquire about classes.\n\nName: ${name}\nMobile: ${phone}\nStudent age: ${data.get('age')}\nInterested in: ${data.get('interest')}${String(data.get('message')).trim() ? '\nMessage: '+String(data.get('message')).trim() : ''}\n\nPlease share suitable class timings and fees.`;$('#enquiry-preview').textContent=enquiry;$('#sms-link').href='sms:+917500345441?body='+encodeURIComponent(enquiry);$('#copy-status').textContent='';openDialog($('#enquiry-dialog'));});
+  $('#enquiry-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;const data=new FormData(f);const name=String(data.get('name')).trim();if(!name){f.elements.name.setCustomValidity('Please enter your name.');f.elements.name.reportValidity();return;}f.elements.name.setCustomValidity('');enquiry=`Hello Bhuran Karate Academy!\nI’d like to enquire about classes.\n\nName: ${name}\nStudent age: ${data.get('age')}\nInterested in: ${data.get('interest')}\n\nPlease share suitable class timings and fees.`;$('#enquiry-preview').textContent=enquiry;$('#sms-link').href='sms:+917500345441?body='+encodeURIComponent(enquiry);$('#copy-status').textContent='';openDialog($('#enquiry-dialog'));});
   $('#enquiry-form').addEventListener('input',e=>{if(e.target.setCustomValidity)e.target.setCustomValidity('');});
   $('#copy-enquiry').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(enquiry);$('#copy-status').textContent='Message copied. Paste it into your preferred messaging app.';}catch{$('#copy-status').textContent='Copy is unavailable in this browser. Select and copy the message above.';}});
   $('#privacy-open').addEventListener('click',()=>openDialog($('#privacy-dialog')));
