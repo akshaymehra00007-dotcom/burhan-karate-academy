@@ -1,0 +1,12 @@
+{
+  "name": "bhuran-karate-academy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bhuran Karate Academy, Agra — responsive business website",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check dist/app.js && node --check dist/site-config.js",
+    "build": "npm run check"
+  }
+}
