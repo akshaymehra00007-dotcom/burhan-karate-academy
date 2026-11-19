@@ -1,0 +1,82 @@
+/* Content additions follow the established academy colours and typography. */
+.coach-profile{border-top:1px solid var(--line);margin-top:25px;padding-top:25px}
+.coach-profile .eyebrow{margin-bottom:10px}.coach-profile h3{font-size:32px;margin-bottom:14px}
+.coach-profile>p:not(.eyebrow){font-size:13px;color:var(--muted);line-height:1.9}
+.academy-information{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.info-panel{border:1px solid var(--line);background:var(--paper);min-width:0}
+.info-panel summary{padding:23px 22px;display:flex;justify-content:space-between;gap:18px;align-items:center;cursor:pointer;list-style:none;font-weight:800;font-size:14px;line-height:1.5}
+.info-panel summary::-webkit-details-marker{display:none}.info-plus{font-size:25px;font-weight:400;line-height:1;flex-shrink:0}
+.info-panel[open] .info-plus{transform:rotate(45deg)}.info-panel summary:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.info-body{padding:0 22px 24px}.info-body h3{font-size:24px;margin:15px 0 12px}.info-body p,.info-body li{font-size:14px;line-height:1.8;color:var(--muted)}
+.info-body ul{padding-left:19px;margin:10px 0 22px}.info-body li+li{margin-top:12px}
+.belt-journey{list-style:none;padding:0;margin:16px 0 22px}.belt-journey li{padding:12px 0;border-bottom:1px solid var(--line)}
+.belt-journey span,.belt-journey strong{display:block}.belt-journey span{font-size:12px}.belt-journey strong{font-size:14px;color:var(--ink)}
+.service-boxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.service-box{min-width:0;padding:26px 26px 22px;min-height:235px;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper);transition:transform .2s,border-color .2s}
+.service-box:hover{transform:translateY(-3px);border-color:var(--red)}
+.service-category{font-size:10px;letter-spacing:.12em;font-weight:800;margin-bottom:22px}
+.service-box h3{font-size:31px;line-height:1.06;margin-bottom:14px;max-width:330px}
+.service-box p{font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:25px}
+.service-enquire{font-size:11px;font-weight:800;margin-top:auto;padding-top:15px;border-top:1px solid var(--line)}
+.service-theme-1{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.service-theme-1 p{color:#d0d5e4}.service-theme-1 .service-enquire{border-color:#ffffff30}
+.service-theme-2{background:#efad18;color:var(--ink);border-color:#efad18}
+.service-theme-2 p{color:var(--ink)}.service-theme-2 .service-enquire{border-color:#111a4030}
+.facility-section{margin-top:55px}.facility-heading h3{font-size:38px}.facility-heading .eyebrow{margin-bottom:14px}
+.facility-boxes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.facility-box{display:flex;gap:14px;padding:19px 22px;border:1px solid var(--line);align-items:flex-start;background:var(--paper)}
+.facility-box>span{color:var(--red);font-weight:800}.facility-box p{font-size:14px;line-height:1.7}
+.medal-boxes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:0 0 30px}
+.medal-box{padding:23px 18px;border:1px solid var(--line)}.medal-box>span{font-size:10px;letter-spacing:.1em;font-weight:800}
+.medal-box strong{display:block;font-family:var(--display);font-size:42px;line-height:1.15;margin:14px 0 8px;color:var(--red)}
+.medal-box p{font-size:13px;line-height:1.6;color:var(--muted)}
+/* Preserve the complete photograph instead of filling its frame by cropping. */
+.academy-photo{height:auto;align-self:start}
+.academy-photo>img{height:auto;aspect-ratio:1600/714;object-fit:contain;background:var(--ink);padding:0}
+.gallery-item,.gallery-item.wide{background:var(--ink)}
+.gallery-item img{object-fit:contain;object-position:center}
+.gallery-item:hover img{transform:none}
+.gallery-item>span{background:linear-gradient(transparent,#000b);left:0;right:0;bottom:0;padding:30px 18px 15px}
+.footer-bottom .footer-vision{margin-left:0}
+.vision-header{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:24px 52px;border-bottom:1px solid var(--line)}
+.vision-header .brand-symbol{width:58px;height:58px}.vision-header nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+.vision-hero{padding:100px 0;background:var(--ink);color:var(--paper)}
+.vision-hero h1{font-size:clamp(72px,9vw,132px);line-height:.94}.vision-hero h1 em{color:#efad18}
+.vision-hero .eyebrow{color:#efad18}.vision-tagline{font-size:17px;line-height:1.8;margin-top:35px;max-width:560px}
+.vision-statement{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.vision-statement>div>p:not(.eyebrow){font-size:18px;line-height:1.9;color:var(--muted)}
+.vision-statement>div>p+p{font-size:15px;font-weight:700;color:var(--ink)}
+.vision-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:95px}
+.vision-pillars article{border:1px solid var(--line);padding:32px}
+.vision-pillars article>span{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--red)}
+.vision-pillars h3{font-size:36px;margin:25px 0 18px}.vision-pillars p{font-size:16px;line-height:1.8;color:var(--muted)}
+.vision-commitment{padding:85px 0;background:var(--ink);color:var(--paper)}
+.vision-commitment h2{font-size:clamp(50px,6vw,88px)}.vision-commitment h2 em{color:#efad18}
+.vision-commitment .eyebrow{color:#efad18}.vision-commitment .button{margin-top:35px}
+.vision-back{display:inline-block;margin:25px 0 0 25px;font-size:13px;border-bottom:1px solid #ffffff70}
+.vision-footer{display:flex;justify-content:space-between;gap:20px;padding-top:35px;padding-bottom:35px;font-size:13px}
+@media(max-width:1100px) and (min-width:801px){.desktop-nav{gap:18px}.header{padding:0 26px}.header .brand{font-size:26px}.nav-enquire{font-size:10px;padding:13px 16px}.service-box{padding:24px 20px}.service-box h3{font-size:28px}}
+@media(max-width:800px){
+.academy-information{grid-template-columns:1fr;gap:14px}.coach-profile>p:not(.eyebrow){font-size:14px}
+.service-boxes{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.service-box{padding:23px 20px;min-height:240px}
+.service-box h3{font-size:28px}.service-category{font-size:9px}.service-enquire{font-size:11px}.service-box p{font-size:14px}
+.facility-boxes{grid-template-columns:1fr}.facility-box{padding:18px}.medal-boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+.medal-box:last-child{grid-column:1/-1}.medal-box strong{font-size:36px}.medal-box p{font-size:14px}
+.academy-photo{height:auto!important;padding-bottom:18px}.academy-photo>img{height:auto;aspect-ratio:1600/714}.photo-label{font-size:7px}
+.vision-header{padding:20px 22px;flex-wrap:wrap}.vision-header .brand{font-size:25px}.vision-header .brand small{font-size:6px}.vision-header nav{gap:20px;flex-wrap:wrap;font-size:13px}
+.vision-header .brand-symbol{width:44px;height:44px}
+.vision-hero{padding:65px 0}.vision-hero h1{font-size:clamp(64px,14vw,100px)}.vision-tagline{font-size:16px;margin-top:25px}
+.vision-statement{grid-template-columns:1fr;gap:30px}.vision-statement>div>p:not(.eyebrow){font-size:17px}
+.vision-pillars{grid-template-columns:1fr;gap:15px;padding-bottom:60px}.vision-pillars article{padding:27px}
+.vision-commitment{padding:65px 0}.vision-commitment h2{font-size:clamp(46px,11vw,70px)}.vision-back{display:block;width:fit-content;margin-left:0}
+.vision-footer{flex-wrap:wrap}
+}
+@media(max-width:480px){.service-boxes{grid-template-columns:1fr}.service-box{min-height:210px}.service-category{margin-bottom:20px}.service-box h3{font-size:31px}.service-box p{margin-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.service-box{transition:none}.service-box:hover{transform:none}}
+
+/* Keep captions outside the photograph, with no zoom or overlay obscuring people. */
+.academy-photo .photo-label{position:static;display:block;margin:0;padding:12px 15px;background:var(--ink);color:var(--paper)}
+.gallery-item:after{display:none}
+.gallery-item img{height:calc(100% - 50px)}
+.gallery-item>span{height:50px;padding:12px 18px;background:var(--ink)}
+@media(max-width:420px){.achievement-highlights .gallery-item img{height:100%}}
