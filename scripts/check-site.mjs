@@ -16,10 +16,10 @@ if (!html.includes('Dynamic Karate &amp; Dance Academy') || !html.includes('id="
 for (const match of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
   const asset = match[1];
   if (/^(?:https?:|#|tel:|sms:|mailto:)/.test(asset)) continue;
-  const file = resolve('dist',asset);
+  const file = resolve('dist',asset.split(/[?#]/)[0]);
   if (!existsSync(file) || !statSync(file).size) throw new Error(`Missing or empty page asset: ${asset}`);
 }
-for (const file of ['dist/app.js','dist/site-config.js','scripts/preview.mjs']) {
+for (const file of ['dist/app.js','dist/site-config.js','dist/gallery.js','scripts/preview.mjs']) {
   const result = spawnSync(process.execPath,['--check',file],{encoding:'utf8'});
   if (result.status !== 0) throw new Error(result.stderr || `Invalid JavaScript: ${file}`);
 }
