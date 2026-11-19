@@ -12,7 +12,7 @@ if (config.rewrites?.some(route => /server|api/.test(route.destination))) {
   throw new Error('Static page requests must not route through a server function.');
 }
 const html = readFileSync('dist/index.html','utf8');
-if (!html.includes('Bhuran Karate Academy') || !html.includes('id="enquiry-form"')) throw new Error('Missing business page or enquiry form.');
+if (!html.includes('Dynamic Karate &amp; Dance Academy') || !html.includes('id="enquiry-form"')) throw new Error('Missing business page or enquiry form.');
 for (const match of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
   const asset = match[1];
   if (/^(?:https?:|#|tel:|sms:|mailto:)/.test(asset)) continue;
