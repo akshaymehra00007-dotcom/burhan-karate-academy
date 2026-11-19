@@ -57,35 +57,12 @@ dialog[open]{animation:panel-enter .22s ease-out}.hero-media video{opacity:0;tra
 @media(max-width:800px){.principles .marquee-group{gap:28px;padding:17px 22px}.closing-word .marquee-group{gap:20px;padding:24px 22px}}
 @media(prefers-reduced-motion:reduce){.marquee-strip .marquee-track{animation:none;will-change:auto}}
 
-/* Supplied academy details and photos; existing design and animation retained. */
-.academy-details h3{font-family:var(--display);font-size:28px;line-height:1.25;margin:24px 0 18px}
-.academy-details h4{font-size:17px;margin:22px 0 12px}
-.academy-details p,.academy-details li{font-size:16px;line-height:1.9;color:var(--muted)}
-.details-intro{max-width:950px;margin-bottom:32px}
-.details-columns{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.academy-details-list{padding-left:24px;margin:12px 0 24px}
-.academy-details-list li{padding-left:4px;margin-bottom:8px}
-.training-details{margin-top:44px}
-.training-details ol{display:grid;grid-template-columns:1fr 1fr;column-gap:55px}
-.academy-vision{padding-top:60px;padding-bottom:60px}
-.academy-vision p{margin-bottom:16px;max-width:950px}
-.achievements-gallery{margin-top:35px}
-.achievements-gallery .gallery-item{height:350px}
-.achievements-gallery .gallery-item img{object-fit:contain;background:var(--ink)}
-.client-home-gallery .gallery-item img,.screenshot-gallery .gallery-item img{filter:brightness(1.04) contrast(1.03) saturate(1.04)}
-.screenshot-gallery{margin-top:26px}
-.screenshot-photo img{position:absolute;left:0;top:50%;width:100%;height:auto!important;max-width:none;transform:translateY(-50%);clip-path:inset(33.28% 0 33.20% 0)}
-.screenshot-photo{aspect-ratio:716/536;height:auto!important;background:#332f29}
-.screenshot-photo:hover img{transform:translateY(-50%)!important}
-.screenshot-photo.wide{grid-column:auto}
-.screenshot-lightbox{padding-top:44px;overflow:hidden}
-.screenshot-lightbox>img{width:100%;height:auto;max-height:none;clip-path:inset(33.28% 0 33.20% 0);margin-top:-33%;margin-bottom:-33%}
-.screenshot-lightbox>p,.screenshot-lightbox .lightbox-nav{position:relative;z-index:1;background:#111}
-.header .brand small{letter-spacing:.10em}
-@media(max-width:1100px) and (min-width:801px){.desktop-nav{gap:14px}.header{padding-left:22px;padding-right:22px}.header .brand{font-size:27px}.nav-enquire{font-size:9px}}
-@media(max-width:800px){.details-columns{grid-template-columns:1fr;gap:20px}.training-details ol{display:block}.academy-details h3{font-size:25px}.achievements-gallery .gallery-item{height:260px}.header .brand small{font-size:7px}.header .brand{font-size:25px}.academy-vision{padding-top:42px;padding-bottom:42px}.screenshot-lightbox{max-width:95vw}}
-@media(max-width:420px){.achievements-gallery .gallery-item{height:220px}.screenshot-gallery{grid-template-columns:1fr}.header .brand-symbol{width:42px;height:42px}.header .brand small{font-size:6px}}
-
-.lightbox-photo>img{width:100%;height:auto;max-height:calc(95dvh - 155px);object-fit:contain}
-.screenshot-lightbox .lightbox-photo{position:relative;aspect-ratio:716/536;overflow:hidden;max-height:70svh}
-.screenshot-lightbox .lightbox-photo img{position:absolute;top:50%;left:0;max-height:none;width:100%;height:auto;transform:translateY(-50%);clip-path:inset(33.28% 0 33.20% 0)}
+/* Compact achievements preview; all original page styles retained. */
+.achievement-summary{max-width:420px}.achievement-summary p{font-size:12px;color:var(--muted);line-height:1.9}
+.achievement-summary .underlined-link{margin-top:20px}
+.achievement-highlights{grid-template-columns:repeat(3,minmax(0,1fr))}
+.achievement-highlights .gallery-item{height:265px}
+.achievement-highlights img{object-fit:contain;background:var(--ink)}
+.header .brand small{letter-spacing:.08em}
+@media(max-width:800px){.achievement-summary{max-width:100%}.achievement-summary p{font-size:13px}.achievement-highlights{grid-template-columns:repeat(3,minmax(0,1fr))}.achievement-highlights .gallery-item{height:190px}.achievement-highlights .gallery-item>span{left:8px;right:8px;bottom:9px}.achievement-highlights .gallery-item b{font-size:7px}.achievement-highlights .gallery-item i{display:none}.header .brand small{font-size:6px}}
+@media(max-width:420px){.achievement-highlights .gallery-item{height:140px}.achievement-highlights .gallery-item>span{display:none}}
