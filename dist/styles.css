@@ -88,3 +88,11 @@ body{background:#050505;color:#ffffff}
 .message-dialog pre{background:#252525}
 .avatar{background:#303030}
 .brand-symbol img{clip-path:none;transform:none}
+
+/* Keep red text readable on dark surfaces; button fills retain brand red. */
+:root{--accent-text:#ff5555}
+.eyebrow,h2 em,h1 em,.value-pair>div>span,.training-icon,.quote-mark,.review-note>span,.location-icon,.mobile-menu>a>span,.mobile-menu>a:nth-child(5){color:var(--accent-text)}
+.menu-toggle span{background:#ffffff}
+.map-panel{background:#151515}
+.rating-large .stars,.review-quotes figcaption .stars{color:var(--accent-text)}
+#copy-status{color:#8bd48b}

@@ -3,16 +3,17 @@
 .coach-profile .eyebrow{margin-bottom:10px}.coach-profile h3{font-size:32px;margin-bottom:14px}
 .coach-profile>p:not(.eyebrow){font-size:13px;color:var(--muted);line-height:1.9}
 .academy-information{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
-.info-panel{border:1px solid var(--line);background:var(--paper);min-width:0}
+.info-panel{border:1px solid var(--line);background:#151515;color:#ffffff;min-width:0}
+.info-panel summary{background:#b80000;color:#ffffff}
 .info-panel summary{padding:23px 22px;display:flex;justify-content:space-between;gap:18px;align-items:center;cursor:pointer;list-style:none;font-weight:800;font-size:14px;line-height:1.5}
 .info-panel summary::-webkit-details-marker{display:none}.info-plus{font-size:25px;font-weight:400;line-height:1;flex-shrink:0}
 .info-panel[open] .info-plus{transform:rotate(45deg)}.info-panel summary:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .info-body{padding:0 22px 24px}.info-body h3{font-size:24px;margin:15px 0 12px}.info-body p,.info-body li{font-size:14px;line-height:1.8;color:var(--muted)}
 .info-body ul{padding-left:19px;margin:10px 0 22px}.info-body li+li{margin-top:12px}
 .belt-journey{list-style:none;padding:0;margin:16px 0 22px}.belt-journey li{padding:12px 0;border-bottom:1px solid var(--line)}
-.belt-journey span,.belt-journey strong{display:block}.belt-journey span{font-size:12px}.belt-journey strong{font-size:14px;color:var(--ink)}
+.belt-journey span,.belt-journey strong{display:block}.belt-journey span{font-size:12px}.belt-journey strong{font-size:14px;color:#ffffff}
 .service-boxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.service-box{min-width:0;padding:26px 26px 22px;min-height:235px;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper);transition:transform .2s,border-color .2s}
+.service-box{min-width:0;padding:26px 26px 22px;min-height:235px;display:flex;flex-direction:column;border:1px solid var(--line);background:#1a1a1a;color:#ffffff;transition:transform .2s,border-color .2s}
 .service-box:hover{transform:translateY(-3px);border-color:var(--red)}
 .service-category{font-size:10px;letter-spacing:.12em;font-weight:800;margin-bottom:22px}
 .service-box h3{font-size:31px;line-height:1.06;margin-bottom:14px;max-width:330px}
@@ -24,7 +25,7 @@
 .service-theme-2 p{color:#ffffff}.service-theme-2 .service-enquire{border-color:#ffffff50}
 .facility-section{margin-top:55px}.facility-heading h3{font-size:38px}.facility-heading .eyebrow{margin-bottom:14px}
 .facility-boxes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
-.facility-box{display:flex;gap:14px;padding:19px 22px;border:1px solid var(--line);align-items:flex-start;background:var(--paper)}
+.facility-box{display:flex;gap:14px;padding:19px 22px;border:1px solid var(--line);align-items:flex-start;background:#1a1a1a;color:#ffffff}
 .facility-box>span{color:var(--red);font-weight:800}.facility-box p{font-size:14px;line-height:1.7}
 .medal-boxes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:0 0 30px}
 .medal-box{padding:23px 18px;border:1px solid var(--line)}.medal-box>span{font-size:10px;letter-spacing:.1em;font-weight:800}
@@ -45,7 +46,7 @@
 .vision-hero .eyebrow{color:#ff3030}.vision-tagline{font-size:17px;line-height:1.8;margin-top:35px;max-width:560px}
 .vision-statement{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .vision-statement>div>p:not(.eyebrow){font-size:18px;line-height:1.9;color:var(--muted)}
-.vision-statement>div>p+p{font-size:15px;font-weight:700;color:var(--ink)}
+.vision-statement>div>p+p{font-size:15px;font-weight:700;color:#ffffff}
 .vision-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:95px}
 .vision-pillars article{border:1px solid var(--line);padding:32px}
 .vision-pillars article>span{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--red)}
@@ -80,3 +81,7 @@
 .gallery-item img{height:calc(100% - 50px)}
 .gallery-item>span{height:50px;padding:12px 18px;background:var(--ink)}
 @media(max-width:420px){.achievement-highlights .gallery-item img{height:100%}}
+
+/* All academy panels use explicit foreground/background pairs. */
+.facility-box>span,.medal-box strong,.vision-pillars article>span{color:var(--accent-text)}
+.vision-statement>div>p:not(.eyebrow){color:var(--muted)}
