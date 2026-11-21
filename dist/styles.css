@@ -66,3 +66,25 @@ dialog[open]{animation:panel-enter .22s ease-out}.hero-media video{opacity:0;tra
 .header .brand small{letter-spacing:.08em}
 @media(max-width:800px){.achievement-summary{max-width:100%}.achievement-summary p{font-size:13px}.achievement-highlights{grid-template-columns:repeat(3,minmax(0,1fr))}.achievement-highlights .gallery-item{height:190px}.achievement-highlights .gallery-item>span{left:8px;right:8px;bottom:9px}.achievement-highlights .gallery-item b{font-size:7px}.achievement-highlights .gallery-item i{display:none}.header .brand small{font-size:6px}}
 @media(max-width:420px){.achievement-highlights .gallery-item{height:140px}.achievement-highlights .gallery-item>span{display:none}}
+
+/* Dynamic Karate Academy: black foundation, white lettering and logo-red accents. */
+:root{--muted:#b5b5b5;--line:#333333}
+body{background:#050505;color:#ffffff}
+.header,.mobile-menu,.vision-header,.album-header,footer{background:#050505;color:#ffffff}
+.training,.reviews{background:#101010}
+.info-panel,.service-box,.facility-box,.training-card{background:#151515}
+.service-theme-1{background:#080808;border-color:#333333}
+.service-theme-2,.red-card{background:#e00000;color:#ffffff;border-color:#e00000}
+.service-theme-2 p,.red-card p,.red-card .training-icon{color:#ffffff}
+.service-theme-2 .service-enquire,.red-card a{border-color:#ffffff50}
+.belt-journey strong,.vision-statement>div>p+p{color:#ffffff}
+.button.dark{background:#e00000;color:#ffffff}.button.dark:hover{background:#b80000}
+.underlined-link,.copy-button{border-color:#ffffff}
+.photo-label,.map-caption,.skip{background:#151515;color:#ffffff}
+.enquiry,.vision-hero,.vision-commitment{background:#080808;color:#ffffff}
+.enquiry-form{background:#1e1e1e}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{background:#111111;color:#ffffff}
+.message-dialog{background:#151515;color:#ffffff}
+.message-dialog pre{background:#252525}
+.avatar{background:#303030}
+.brand-symbol img{clip-path:none;transform:none}
