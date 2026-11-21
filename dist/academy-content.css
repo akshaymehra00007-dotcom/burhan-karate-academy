@@ -19,9 +19,9 @@
 .service-box p{font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:25px}
 .service-enquire{font-size:11px;font-weight:800;margin-top:auto;padding-top:15px;border-top:1px solid var(--line)}
 .service-theme-1{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.service-theme-1 p{color:#d0d5e4}.service-theme-1 .service-enquire{border-color:#ffffff30}
-.service-theme-2{background:#efad18;color:var(--ink);border-color:#efad18}
-.service-theme-2 p{color:var(--ink)}.service-theme-2 .service-enquire{border-color:#111a4030}
+.service-theme-1 p{color:#dddddd}.service-theme-1 .service-enquire{border-color:#ffffff30}
+.service-theme-2{background:#e00000;color:#ffffff;border-color:#e00000}
+.service-theme-2 p{color:#ffffff}.service-theme-2 .service-enquire{border-color:#ffffff50}
 .facility-section{margin-top:55px}.facility-heading h3{font-size:38px}.facility-heading .eyebrow{margin-bottom:14px}
 .facility-boxes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
 .facility-box{display:flex;gap:14px;padding:19px 22px;border:1px solid var(--line);align-items:flex-start;background:var(--paper)}
@@ -41,8 +41,8 @@
 .vision-header{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:24px 52px;border-bottom:1px solid var(--line)}
 .vision-header .brand-symbol{width:58px;height:58px}.vision-header nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
 .vision-hero{padding:100px 0;background:var(--ink);color:var(--paper)}
-.vision-hero h1{font-size:clamp(72px,9vw,132px);line-height:.94}.vision-hero h1 em{color:#efad18}
-.vision-hero .eyebrow{color:#efad18}.vision-tagline{font-size:17px;line-height:1.8;margin-top:35px;max-width:560px}
+.vision-hero h1{font-size:clamp(72px,9vw,132px);line-height:.94}.vision-hero h1 em{color:#ff3030}
+.vision-hero .eyebrow{color:#ff3030}.vision-tagline{font-size:17px;line-height:1.8;margin-top:35px;max-width:560px}
 .vision-statement{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .vision-statement>div>p:not(.eyebrow){font-size:18px;line-height:1.9;color:var(--muted)}
 .vision-statement>div>p+p{font-size:15px;font-weight:700;color:var(--ink)}
@@ -51,8 +51,8 @@
 .vision-pillars article>span{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--red)}
 .vision-pillars h3{font-size:36px;margin:25px 0 18px}.vision-pillars p{font-size:16px;line-height:1.8;color:var(--muted)}
 .vision-commitment{padding:85px 0;background:var(--ink);color:var(--paper)}
-.vision-commitment h2{font-size:clamp(50px,6vw,88px)}.vision-commitment h2 em{color:#efad18}
-.vision-commitment .eyebrow{color:#efad18}.vision-commitment .button{margin-top:35px}
+.vision-commitment h2{font-size:clamp(50px,6vw,88px)}.vision-commitment h2 em{color:#ff3030}
+.vision-commitment .eyebrow{color:#ff3030}.vision-commitment .button{margin-top:35px}
 .vision-back{display:inline-block;margin:25px 0 0 25px;font-size:13px;border-bottom:1px solid #ffffff70}
 .vision-footer{display:flex;justify-content:space-between;gap:20px;padding-top:35px;padding-bottom:35px;font-size:13px}
 @media(max-width:1100px) and (min-width:801px){.desktop-nav{gap:18px}.header{padding:0 26px}.header .brand{font-size:26px}.nav-enquire{font-size:10px;padding:13px 16px}.service-box{padding:24px 20px}.service-box h3{font-size:28px}}
