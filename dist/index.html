@@ -9,12 +9,35 @@
   <meta property="og:description" content="Karate. Confidence. Community. Discover Dynamic Karate &amp; Dance Academy in Agra.">
   <meta property="og:image" content="https://burhan-karate-academy.vercel.app/assets/client-home-19.jpg">
   <link rel="icon" href="assets/dynamic-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/dynamic-logo.svg" as="image">
+  <style>
+/* Branded entrance: the current logo stays still while the red ring moves. */
+.brand-loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#050505;color:#ffffff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility 0s .55s}
+html.logo-loading .brand-loader{opacity:1;visibility:visible;pointer-events:auto;transition:none}
+html.logo-loading body{overflow:hidden}
+.brand-loader-content{text-align:center;padding:32px;transform:translateY(0);transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .55s ease}
+html:not(.logo-loading) .brand-loader-content{transform:translateY(-12px);opacity:0}
+.brand-loader-emblem{position:relative;width:176px;height:176px;margin:0 auto 28px;display:grid;place-items:center}
+.brand-loader-emblem:before{content:'';position:absolute;inset:0;border:1px solid #ffffff18;border-radius:50%}
+.brand-loader-emblem:after{content:'';position:absolute;inset:0;border:2px solid transparent;border-top-color:#e00000;border-right-color:#e00000;border-radius:50%;animation:logo-orbit 1.65s linear infinite}
+.brand-loader-logo{width:146px;height:146px;object-fit:contain;animation:logo-breathe 1.8s ease-in-out infinite}
+.brand-loader-name{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-size:30px;font-weight:700;line-height:1;letter-spacing:.16em}
+.brand-loader-tagline{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.24em;color:#c8c8c8;margin-top:13px}
+.brand-loader-line{width:120px;height:2px;margin:27px auto 0;overflow:hidden;background:#ffffff20}
+.brand-loader-line:after{content:'';display:block;height:100%;width:55%;background:#e00000;animation:logo-progress 1.25s ease-in-out infinite}
+@keyframes logo-orbit{to{transform:rotate(360deg)}}
+@keyframes logo-breathe{50%{opacity:.82;transform:scale(.975)}}
+@keyframes logo-progress{from{transform:translateX(-110%)}to{transform:translateX(290%)}}
+@media(prefers-reduced-motion:reduce){.brand-loader,.brand-loader-content{transition:none}.brand-loader-emblem:after,.brand-loader-logo,.brand-loader-line:after{animation:none}.brand-loader-line:after{width:100%}}
+</style>
+  <script>document.documentElement.classList.add("logo-loading");setTimeout(function(){document.documentElement.classList.remove("logo-loading");},3500);</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="academy-content.css"><link rel="stylesheet" href="founder.css"><script src="site-config.js" defer></script><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="academy-content.css"><link rel="stylesheet" href="founder.css"><script src="loader.js" defer></script><script src="site-config.js" defer></script><script src="app.js" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Dynamic Karate & Dance Academy","sport":["Karate","Dance","Taekwondo","Yoga","Fitness"],"telephone":"+917500345441","address":{"@type":"PostalAddress","streetAddress":"29 kh 838 dashrath Kunj koloni rajeswer mandir ke paas shamshabad road agra","addressLocality":"Agra","addressRegion":"Uttar Pradesh","postalCode":"28001","addressCountry":"IN"},"hasMap":"https://www.google.com/maps/search/?api=1&query=29%20kh%20838%20dashrath%20Kunj%20koloni%20rajeswer%20mandir%20ke%20paas%20shamshabad%20road%20agra"}</script>
 </head>
 <body>
+  <div class="brand-loader" role="status" aria-label="Loading Dynamic Karate Academy"><div class="brand-loader-content" aria-hidden="true"><div class="brand-loader-emblem"><img class="brand-loader-logo" src="assets/dynamic-logo.svg" alt="" fetchpriority="high" width="146" height="146"></div><p class="brand-loader-name">DYNAMIC</p><p class="brand-loader-tagline">DISCIPLINE. CONFIDENCE. STRENGTH.</p><div class="brand-loader-line"></div></div></div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="header" id="top">
     <a class="brand" href="#top" aria-label="Dynamic Karate &amp; Dance Academy home"><span class="brand-symbol" aria-hidden="true"><img src="assets/dynamic-logo.svg" alt=""></span><span>DYNAMIC<small>KARATE &amp; DANCE ACADEMY · AGRA</small></span></a>
